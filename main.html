@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conn & Men Clothes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #43fd4d;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .product p {
+            color: #666;
+            font-size: 1em;
+        }
+        .product .price {
+            color: #333;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .product .buy-button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .product .buy-button:hover {
+            background-color: #e5533d;
+        }
+        .about {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .about h2 {
+            margin-top: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .about p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.6;
+        }
+        .contact p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.6;
+        }
+        .about img {
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .contact {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact h2 {
+            margin-top: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+        .contact button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .contact button:hover {
+            background-color: #e5533d;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Conn&Men.png" alt="Logo" height="60"/>
+        <h1>Conn & Men Clothes</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <h2>Featured Products</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="Dalle Suit.webp" alt="Mens Suit" />
+                <h3>Stylised Suit</h3>
+                <p>Flared with Smooth, elegant blues and whites, our suits come with high class for any occasion.</p>
+                <p class="price">$1999.99</p>
+                <a href="#" class="buy-button">Out of Stock</a>
+            </div>
+            <div class="product">
+                <img src="Dalle Dress.webp" alt="Womans Dress" />
+                <h3>Designer Dress</h3>
+                <p>When you want jaws to drop, our dresses are precisely for you!</p>
+                <p class="price">$2900.00</p>
+                <a href="#" class="buy-button">Out of Stock</a>
+            </div>
+            <div class="product">
+                <img src="Snake Oil Product.webp" alt="Snake Oil" />
+                <h3>Superfluous Snake Oil</h3>
+                <p>Snake Oil? What Can't it do?!</p>
+                <p class="price">$299.00</p>
+                <a href="#" class="buy-button">Out of Stock</a>
+            </div>
+            <div class="product">
+                <img src="Money Money Money.webp" alt="Money Money Money" />
+                <h3>Need A Loan?</h3>
+                <p>We all need a financial break at times, see what we can do for you</p>
+                <a href="#" class="buy-button">Currently Closed</a>
+            </div>
+            <div class="product">
+                <img src="Golden Ticket.webp" alt="Golden Ticket" />
+                <h3>Lotto Tickets</h3>
+                <p>Is Today your lucky day? Try your luck with lotto!</p>
+                <a href="#" class="buy-button">Currently Closed</a>
+            </div>
+            <div class="product">
+                <img src="Headset.webp" alt="Support Network" />
+                <h3>Contact Our Support</h3>
+                <p>Need to talk to our lovely staff? Click below!</p>
+                <a href="#" class="buy-button">Currently Closed</a>
+            </div>
+        </div>
+        <div class="about">
+            <h2>About Us</h2>
+            <p>Here at Conn & Men Clothes, we pride ourselves on some of the most exquisite clothing currently available on the market. From elegantly designed dresses to stylised and flary men’s suits, we are sure to catch your eye with our stunning range of clothing with our long history of experience in producing unbelievable pieces of artwork, brewing tonics, providing loans & aiding customers with online call centres.</p>
+            <p>Our rich and storied history delves back to 1335 with our first major client was Marcus the third. Upon request, our team produced fine, silky smooth robes with a unique twist. Utilising the latest in magic of the time, our weavers were able to intensify its beauty based upon the wit of the individual.</p>
+            <img src="The King.webp" alt="The King" width="190" height="200" />
+            <img src="The Weavers.webp" alt="The Weavers" width="190" height="200" />
+            <img src="The Robe.webp" alt="The Robe" width="190" height="200" />
+            <img src="The Presentation.webp" alt="The Presentation" width="190" height="200" />
+            <img src="The Walk.webp" alt="The Walk" width="190" height="200" />
+            <p>Though results were mixed due to those who were unable to see the garments, Conn & Man had just become the peak of conversation among the people, under that of the King’s new robes. This ultimately began the multigenerational business known as Conn & Men that would continue to evolve and develop to this current day.</p>
+
+            <div> <p></p> </div>
+
+            <p>A travelling business by nature, Conn & Men visited vast parts of Europe hoping to find customers of high esteem to sell their wares. This deemed challenging though as after the Emperor’s unreasonable dissatisfaction for his robes, the weaving industry suffered greatly. Travelling the roads of Europe, Conn & Men found customers looking to buy robes far & scarce as the cost of producing such robes were beyond most member’s costs, interests or desire.  </p>
+            <p>This sparked Conn & Men’s evolution into a new era of products which were more affordable to the everyday individual. Snake oils and natural remedies. Being a fraction of the cost and a lot more produceable in large quantities, Conn & Men’s natural cures were a hit for small, localised communities.</p>
+            <img src="Sweeping Paths.webp" alt="The Path" width="190" height="200" />
+            <img src="Sales Failed.webp" alt="Failed Sales" width="190" height="200" />
+            <img src="Snake Oil.webp" alt="The Cure" width="190" height="200" />
+            <img src="Selling Remedies.webp" alt="Selling Remedies" width="190" height="200" />
+            <img src="Stinking Ritch.webp" alt="Money" width="190" height="200" />
+            <p>Our pockets were once more were aligned with gold and with an even bigger desire to help the community! Though many of the uses of the tonic evolved from the placebo effect, our business was not one to dispel nonfactual information or to educate the public on their interpretations.</p>
+
+            <div> <p></p> </div>
+
+            <p>With people looking to explore the world and needing the funds to do it, Conn & Men found a way to finally give back to the public through means of loans. Due to the risk & reward of running a loaning business, our loans did warrant a higher inflation to that of a regular bank.</p>
+            <p>Though being kinder & more understanding than your general bank, we were happy to loan the money to less well off souls who were of higher risk. Where members were unable to pay back the loan in time, members at Conn & Men found every member capable of contributing back through the utility of physical labour!</p>
+            <img src="Invest In Exploration.webp" alt="Exploration" width="190" height="200" />
+            <img src="Invest In A Loan.webp" alt="Broke" width="190" height="200" />
+            <img src="Invest In A Handshake.webp" alt="Loan" width="190" height="200" />
+            <img src="Invest In A Return.webp" alt="Return" width="190" height="200" />
+            <img src="Invest In Workers.webp" alt="Work" width="190" height="200" />
+            <p>Though many were unable to pay off their loan within their working career’s lifetime, we at Conn & Man do believe we allowed members of society to achieve big with our support and continue to offer loans to members looking for support!</p>
+            
+            <div> <p></p> </div>
+
+            <p>During the 19th Century, Conn & Men developed a new form of business in sweepstakes and lottery events. With the growing popularity in gambling at pubs and racing centres, Conn & Men were able to find their new form of business. Hosting Giveaways and our own little lotteries, you could win big with a little bit of luck on your side.</p>
+            <img src="Gambling Sweepstakes.webp" alt="Sweepstakes" width="190" height="200" />
+            <img src="Gambling Casino.webp" alt="Casino" width="190" height="200" />
+            <img src="Gambling Arcade.webp" alt="Arcade" width="190" height="200" />
+            <img src="Gambling Tallented Gambler.webp" alt="Gambler" width="190" height="200" />
+            <img src="Gambling Win.webp" alt="Winner" width="190" height="200" />
+            <p>Conn & Men would like to state that any allegations of fraudulent activity in regards to lottery and sweepstake scams are held in lies and have no official factual basis. Just ask our friendly staff who have won our events a great many times! On the other hand, what is true is that Conn & Men did indeed run Arcades & Casinos in the late 1970s though due to legal issues and push back from local governing agencies, Conn & Men Arcades & Casinos sadly closed down in the 1980s.</p>
+
+            <div> <p></p> </div>
+
+            <p>Our most current business comes in the form of mobile support centres across the world to aid in any troubles you may have. We assist in accidental credit card charges, assistance with lottery and prize claims, giving you support for device security we offer, letting you know about data breaches or needing to fill out legal information such as your tax returns or even updating your driver’s license. We currently have call centres in Nigeria, India, the Philippines, and Ghana. </p>
+            <img src="Call Centre.webp" alt="Call Centre" width="190" height="200" />
+            <img src="Old People.webp" alt="Old People" width="190" height="200" />
+            <img src="Problem Solved.webp" alt="Solution" width="190" height="200" />
+            <img src="Happy Old People.webp" alt="Happy Couple" width="190" height="200" />
+            <img src="Credit Card .webp" alt="Credit Card" width="190" height="200" />
+            <p>Don’t be alarmed if we try to get onto your computer, phone or ask for any of your personal details as this is typical protocol for our call centres to validate you as a customer and not some phony trying to scammer or trick us.</p>
+
+            <p>This is where our story stops for Conn & Men. We hope you learning about our rich history has encouraged you to use one of our providing services and we hope you have a good day!</p>
+        </div>
+
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <div>
+                <p>Sorry for any inconveniences but due to recent problems with our products and services we provide, Conn & Men is unable to provide and contacts or services to any of our trade partners or customers. It is unknown when Conn & Men services will be returning back online but we hope to have you back soon! Thanks for stopping by Conn & Men Clothing!</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Conn & Men Industries</p>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please Note: This website is for the purposes of creatively retelling the story of The Emperor’s New Clothes in the perspective of the con men and what became of their legacy. There is NO items or services for sale and there will never be any of these items for sale through this website. Please also make sure to always look out for scams. No one is above being scammed.</p>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user loads the page, open the modal
+        window.onload = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
